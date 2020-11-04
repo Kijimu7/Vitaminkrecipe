@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity{
         //Create handle for the RetrofitInstance interface
 
         GetDataService service = RecipeClientInstance.getRetrofitInstance().create(GetDataService.class);
-        Call<Result> call = service.getSearch("chicken", 5, "107422fa", "a3784e41fd63db8052d0d7cba9e6384c");
+        Call<Result> call = service.getSearch("chicken", 5, "VITK1","107422fa", "a3784e41fd63db8052d0d7cba9e6384c");
         call.enqueue(new Callback<Result>(){
             @Override
             public void onResponse(Call<Result> call, Response<Result> response){

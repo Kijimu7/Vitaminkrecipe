@@ -12,6 +12,6 @@ package com.example.vitaminkrecipetest.network;
 public interface GetDataService{
 
     @GET("search")
-    Call<Result> getSearch(@Query("q") String query, @Query("count") Integer count,@Query("app_id") String app_id, @Query("app_key") String app_key);
+    Call<Result> getSearch(@Query("q") String query, @Query("count") Integer count, @Query("totalNutrients") String totalNutrients, @Query("app_id") String app_id, @Query("app_key") String app_key);
 
 }

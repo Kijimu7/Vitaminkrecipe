@@ -43,6 +43,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
         public final View mView;
 
+
+        TextView txtNutrients;
         TextView txtTitle;
         private ImageView coverImage;
 
@@ -51,6 +53,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             mView = itemView;
 
             txtTitle = mView.findViewById(R.id.title);
+            txtNutrients = mView.findViewById(R.id.totalNutrients);
             coverImage = mView.findViewById(R.id.coverImage);
         }
     }
@@ -67,6 +70,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     @Override
     public void onBindViewHolder( CustomViewHolder holder, int position) {
         holder.txtTitle.setText(dataList.get(position).getRecipe().getLabel());
+        holder.txtNutrients.setText(String.valueOf(dataList.get(position).getRecipe().getTotalNutrients().getvITK1().getQuantity()));
 
 
         Picasso.Builder builder = new Picasso.Builder(context);

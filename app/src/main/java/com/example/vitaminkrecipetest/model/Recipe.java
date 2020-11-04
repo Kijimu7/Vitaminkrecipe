@@ -14,6 +14,18 @@ public class Recipe {
     @SerializedName("image")
     @Expose
     private String image;
+    @SerializedName("totalNutrients")
+    @Expose
+    private TotalNutrients totalNutrients;
+
+    public TotalNutrients getTotalNutrients() {
+        return totalNutrients;
+    }
+
+    public void setTotalNutrients(TotalNutrients totalNutrients) {
+        this.totalNutrients = totalNutrients;
+    }
+
 
     public String getUri() {
         return uri;
