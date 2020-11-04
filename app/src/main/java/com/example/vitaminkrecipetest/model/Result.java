@@ -1,49 +1,32 @@
 package com.example.vitaminkrecipetest.model;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
 import java.util.List;
 
+import com.example.vitaminkrecipetest.model.Hit;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+
 public class Result {
+
     @SerializedName("q")
-    public String q;
+    @Expose
+    private String q;
     @SerializedName("from")
-    public int from;
+    @Expose
+    private Integer from;
     @SerializedName("to")
-    public int to;
+    @Expose
+    private Integer to;
     @SerializedName("more")
-    public boolean more;
+    @Expose
+    private Boolean more;
     @SerializedName("count")
-    public int count;
+    @Expose
+    private Integer count;
     @SerializedName("hits")
-    public List<Hits> hits;
-
-
-    //    @SerializedName("q")
-//    private String q;
-//    @SerializedName("from")
-//    private Integer from;
-//    @SerializedName("to")
-//    private Integer to;
-//    @SerializedName("hits")
-//    List<com.example.vitaminkrecipetest.model.Hits> hits;
-//    @SerializedName("image")
-//    private String image;
-//    @SerializedName("label")
-//    private String label;
-
-
-    public Result(String q, Integer from, Integer to, boolean more, int count, List<Hits> hits) {
-        this.q = q;
-        this.from = from;
-        this.to = to;
-        this.more = more;
-        this.count = count;
-        this.hits = new ArrayList<Hits>();
-
-
-    }
+    @Expose
+    public List<Hit> hits;
 
     public String getQ() {
         return q;
@@ -53,46 +36,47 @@ public class Result {
         this.q = q;
     }
 
-    public int getFrom() {
+    public Integer getFrom() {
         return from;
     }
 
-    public void setFrom(int from) {
+    public void setFrom(Integer from) {
         this.from = from;
     }
 
-    public int getTo() {
+    public Integer getTo() {
         return to;
     }
 
-    public void setTo(int to) {
+    public void setTo(Integer to) {
         this.to = to;
     }
 
-    public boolean isMore() {
+    public Boolean getMore() {
         return more;
     }
 
-    public void setMore(boolean more) {
+    public void setMore(Boolean more) {
         this.more = more;
     }
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(Integer count) {
         this.count = count;
     }
 
-    public List<Hits> getHits() {
+    public List<Hit> getHits() {
         return hits;
+
     }
 
-    public void setHits(List<Hits> hits) {
+    public void setHits(List<Hit> hits) {
         this.hits = hits;
     }
 
 
-}
 
+}

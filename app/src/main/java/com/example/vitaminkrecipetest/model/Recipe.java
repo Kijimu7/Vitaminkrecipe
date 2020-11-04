@@ -1,14 +1,19 @@
 package com.example.vitaminkrecipetest.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Recipe {
+
     @SerializedName("uri")
-    public String uri;
+    @Expose
+    private String uri;
     @SerializedName("label")
-    public String label;
+    @Expose
+    private String label;
     @SerializedName("image")
-    public String image;
+    @Expose
+    private String image;
 
     public String getUri() {
         return uri;

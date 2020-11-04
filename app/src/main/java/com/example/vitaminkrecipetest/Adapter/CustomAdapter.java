@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vitaminkrecipetest.R;
-import com.example.vitaminkrecipetest.model.Hits;
-import com.example.vitaminkrecipetest.model.Recipe;
+import com.example.vitaminkrecipetest.activity.MainActivity;
+import com.example.vitaminkrecipetest.model.Hit;
 import com.example.vitaminkrecipetest.model.Result;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
@@ -22,16 +22,21 @@ import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
 
-    private List<Hits> dataList;
+    private List<Hit> dataList;
     private Context context;
+//    public List<Hit> hits;
 
-    public CustomAdapter(Context context, List<Hits> dataList){
+
+    public CustomAdapter(List<Hit> dataList, Context context) {
+        this.dataList = dataList;
         this.context = context;
-        this.dataList = new ArrayList<>();
-
     }
 
-    public void addAll(List<Hits> hits) {
+    public void addAll(List<Hit> dataList) {
+        this.dataList = dataList;
+        notifyDataSetChanged();
+
+
     }
 
     class CustomViewHolder extends RecyclerView.ViewHolder{
@@ -46,25 +51,27 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             mView = itemView;
 
             txtTitle = mView.findViewById(R.id.title);
-            coverImage = mView.findViewById(R.id.image);
+            coverImage = mView.findViewById(R.id.coverImage);
         }
     }
 
+
     @NonNull
     @Override
-    public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CustomViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.custom_row, parent, false);
         return new CustomViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        holder.txtTitle.setText((CharSequence) dataList.get(position).getLable().getImage());
+    public void onBindViewHolder( CustomViewHolder holder, int position) {
+        holder.txtTitle.setText(dataList.get(position).getRecipe().getLabel());
+
 
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
-        builder.build().load(dataList.get(position).getImage())
+        builder.build().load(dataList.get(position).getRecipe().getImage())
                 .placeholder((R.drawable.ic_launcher_background))
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.coverImage);
