@@ -1,4 +1,4 @@
-package com.example.vitaminkrecipetest.model;
+package com.example.vitaminkrecipe.model;
 
 public class VITK1{
     public String label;

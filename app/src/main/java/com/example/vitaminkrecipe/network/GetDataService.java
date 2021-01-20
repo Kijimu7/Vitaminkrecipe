@@ -1,9 +1,7 @@
-package com.example.vitaminkrecipetest.network;
+package com.example.vitaminkrecipe.network;
 
 
-        import com.example.vitaminkrecipetest.model.Result;
-
-        import java.util.List;
+        import com.example.vitaminkrecipe.model.Result;
 
         import retrofit2.Call;
         import retrofit2.http.GET;

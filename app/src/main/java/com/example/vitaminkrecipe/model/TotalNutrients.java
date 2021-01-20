@@ -1,6 +1,5 @@
-package com.example.vitaminkrecipetest.model;
+package com.example.vitaminkrecipe.model;
 
-import com.example.vitaminkrecipetest.model.VITK1;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

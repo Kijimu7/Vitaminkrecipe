@@ -1,4 +1,4 @@
-package com.example.vitaminkrecipetest;
+package com.example.vitaminkrecipe;
 
 import android.content.Context;
 

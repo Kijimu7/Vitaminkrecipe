@@ -1,6 +1,4 @@
-package com.example.vitaminkrecipetest.model;
-
-import android.net.Uri;
+package com.example.vitaminkrecipe.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -1,6 +1,5 @@
-package com.example.vitaminkrecipetest.activity;
+package com.example.vitaminkrecipe.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,22 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ListAdapter;
 import android.widget.Toast;
 
-import com.example.vitaminkrecipetest.Adapter.CustomAdapter;
-import com.example.vitaminkrecipetest.R;
-import com.example.vitaminkrecipetest.RecipeClientInstance;
-import com.example.vitaminkrecipetest.model.Hit;
-import com.example.vitaminkrecipetest.model.Result;
-import com.example.vitaminkrecipetest.network.GetDataService;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import com.example.vitaminkrecipe.Adapter.CustomAdapter;
+import com.example.vitaminkrecipe.R;
+import com.example.vitaminkrecipe.RecipeClientInstance;
+import com.example.vitaminkrecipe.model.Hit;
+import com.example.vitaminkrecipe.model.Result;
+import com.example.vitaminkrecipe.network.GetDataService;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;

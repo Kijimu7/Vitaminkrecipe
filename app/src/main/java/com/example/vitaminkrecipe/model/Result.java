@@ -1,8 +1,7 @@
-package com.example.vitaminkrecipetest.model;
+package com.example.vitaminkrecipe.model;
 
 import java.util.List;
 
-import com.example.vitaminkrecipetest.model.Hit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

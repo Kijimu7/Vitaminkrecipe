@@ -1,4 +1,4 @@
-package com.example.vitaminkrecipetest.Adapter;
+package com.example.vitaminkrecipe.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,14 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.vitaminkrecipetest.R;
-import com.example.vitaminkrecipetest.activity.MainActivity;
-import com.example.vitaminkrecipetest.model.Hit;
-import com.example.vitaminkrecipetest.model.Result;
+import com.example.vitaminkrecipe.R;
+import com.example.vitaminkrecipe.model.Hit;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
